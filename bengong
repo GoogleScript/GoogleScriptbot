@@ -1,4 +1,6 @@
+<div class="text-orange mb-2">
 // masukkan token bot mu di sini
+</div>
 var token = 'TOKEN BOT';
 
 // buat objek baru kita kasih nama tg
@@ -62,6 +64,13 @@ var webAppUrl = "ISI DENGAN WEB APP URL NYA";
 
 function setWebHook() {
   var result = tg.request('setWebhook', {
+    url: webAppUrl
+  });
+  Logger.log(result);
+}
+
+function deleteWebhook() {
+  var result = tg.request('deleteWebhook', {
     url: webAppUrl
   });
   Logger.log(result);
